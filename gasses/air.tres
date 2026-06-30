@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GasData" format=3 uid="uid://bxyl52tx80ktw"]
+
+[ext_resource type="Script" uid="uid://14xa6dfjjm2p" path="res://gas_data.gd" id="1_k3rtp"]
+
+[resource]
+script = ExtResource("1_k3rtp")
+name = "Air"
+density = 0.803
+metadata/_custom_type_script = "uid://14xa6dfjjm2p"
