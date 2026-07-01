@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 	var decay: float = friction * delta
 	var speed: float = entity.velocity.length()
 
-	speed = max(speed - decay, 0.0)
+	speed = maxf(speed - decay, 0.0)
 
 	if speed > 0:
 		entity.velocity = entity.velocity.normalized() * speed

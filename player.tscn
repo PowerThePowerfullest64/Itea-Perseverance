@@ -46,19 +46,19 @@ metadata/_custom_type_script = "uid://cim7xk3wpxedg"
 
 [node name="SpeedComponent" type="Node" parent="." unique_id=2030862361]
 script = ExtResource("6_1jxqw")
-speed = 1000.0
+speed = 4000.0
 metadata/_custom_type_script = "uid://do4h021jd4dwb"
 
 [node name="PlayerBrainComponent" type="Node" parent="." unique_id=206504603]
 script = ExtResource("7_1jxqw")
 metadata/_custom_type_script = "uid://db518rdy5113p"
 
-[node name="TopSpeedComponent" type="Node" parent="." unique_id=1935740873]
-script = ExtResource("8_dw050")
-top_speed = 200.0
-metadata/_custom_type_script = "uid://bnm0xdor0e1gm"
-
 [node name="FrictionComponent" type="Node" parent="." unique_id=561842992]
 script = ExtResource("9_b26j0")
-friction = 200.0
+friction = 1000.0
 metadata/_custom_type_script = "uid://7xgl3r4a17ok"
+
+[node name="TopSpeedComponent" type="Node" parent="." unique_id=251372384]
+script = ExtResource("8_dw050")
+top_speed = 250.0
+metadata/_custom_type_script = "uid://bnm0xdor0e1gm"

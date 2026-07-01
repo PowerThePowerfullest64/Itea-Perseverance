@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://dieciodqs7fcm"]
 
+[ext_resource type="Texture2D" uid="uid://n02qjbra08m1" path="res://sprites/ground_atlas.svg" id="1_1oj5k"]
+[ext_resource type="Script" uid="uid://b0qstbcs2ejn4" path="res://ground_tile_layer.gd" id="2_yx7mw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yx7mw"]
+texture = ExtResource("1_1oj5k")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bhunq"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_yx7mw")
+
+[sub_resource type="Environment" id="Environment_bhunq"]
+glow_intensity = 0.63
+
 [node name="MainGame" type="Node2D" unique_id=1590815019]
+
+[node name="GroundTileLayer" type="TileMapLayer" parent="." unique_id=246219293]
+z_index = -1
+tile_set = SubResource("TileSet_bhunq")
+script = ExtResource("2_yx7mw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=576334948]
+environment = SubResource("Environment_bhunq")

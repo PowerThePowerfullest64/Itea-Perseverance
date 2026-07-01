@@ -7,7 +7,7 @@ class_name InputComponent extends Component
 
 func _process(delta: float) -> void:
 	if brain_component == null:
-		print(name + " needs BrainComponent!")
+		push_error(name + " needs BrainComponent!")
 	
 	var acceleration: Vector2 = brain_component.move_vector * delta
 	

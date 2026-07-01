@@ -5,8 +5,9 @@ class_name RegenerationComponent extends Component
 
 func _process(delta: float) -> void:
 	if health_component == null:
-		print(name + " needs HealthComponent!")
+		push_error(name + " needs HealthComponent!")
 		return
 	
-	health_component.health += regeneration_rate * delta
-	health_component.health = min(health_component.health, health_component.max_health)
+	if health_component.health < health_component.max_health:
+		health_component.health += regeneration_rate * delta
+		health_component.health = minf(health_component.health, health_component.max_health)
